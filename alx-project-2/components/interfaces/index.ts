@@ -1,9 +1,6 @@
-import React from 'react'
 
-function index() {
-  return (
-    div
-  )
+export interface User {
+  id: number;
+  name: string;
+  email: string;
 }
-
-export default index
