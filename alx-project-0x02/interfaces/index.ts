@@ -7,3 +7,11 @@ export interface ButtonProps {
   size?: "sm" | "md" | "lg";
   shape?: "rounded-sm" | "rounded-md" | "rounded-lg";
 }
+export interface ButtonProps {
+  small?: boolean;
+  medium?: boolean;
+  large?: boolean;
+  roundedsmall?: boolean;
+  roundedmedium?: boolean;
+  roundedlarge?: boolean;
+}
