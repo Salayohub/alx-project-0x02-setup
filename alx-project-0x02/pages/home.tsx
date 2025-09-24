@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import Card from "@/components/common/Card";
 import PostModal from "@/components/common/PostModal";
+import Header from "@/components/layout/Header";
 
 type Post = {
   title: string;
@@ -42,8 +43,8 @@ const Home = () => {
 
   return (
     <section>
-      <header className="flex justify-between items-center">
-        <h1 className="text-3xl font-bold text-green-600">Blog Post</h1>
+      <header className="flex w-full justify-between items-center bg-green-800">
+        <Header />
         <button
           onClick={() => setIsModalOpen(true)}
           className="px-4 py-2 bg-green-600 text-white rounded"
