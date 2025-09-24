@@ -1,24 +1,18 @@
-import { ButtonProps } from "@/interfaces";
+import { type ButtonProps } from "@/interfaces";
 
-const Button: React.FC<ButtonProps> = ({
-  small,
-  medium,
-  large,
-  roundedsmall,
-  roundedmedium,
-  roundedlarge,
-}) => {
-  const baseStyles = "px-4 py-2 text-white font-semibold rounded";
-  const sizeStyles = small ? "text-sm" : medium ? "text-md" : "text-lg";
-  const roundedStyles = roundedsmall
-    ? "rounded-sm"
-    : roundedmedium
-    ? "rounded-md"
-    : roundedlarge
-    ? "rounded-lg"
-    : "";
+const Button: React.FC<ButtonProps> = ({ size = "md", shape = "rounded-md" }) => {
+  const baseStyles = "px-4 py-2 text-white font-semibold";
 
-  return <button className={`${baseStyles} ${sizeStyles} ${roundedStyles}`}>Button</button>;
+  const sizeStyles =
+    size === "sm" ? "text-sm" : size === "md" ? "text-md" : "text-lg";
+
+  const shapeStyles = shape;
+
+  return (
+    <button className={`${baseStyles} ${sizeStyles} ${shapeStyles}`}>
+      Button
+    </button>
+  );
 };
 
 export default Button;
