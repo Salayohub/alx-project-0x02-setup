@@ -3,3 +3,12 @@ export interface CardProps {
   content: string;
 }
 
+export interface ButtonProps {
+  small: boolean;
+  medium: boolean;
+  large: boolean;
+  roundedsmall: boolean;
+  roundedmedium: boolean;
+  roundedlarge: boolean;
+}
+
