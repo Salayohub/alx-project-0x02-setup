@@ -15,3 +15,10 @@ export interface ButtonProps {
   roundedmedium?: boolean;
   roundedlarge?: boolean;
 }
+
+export interface PostProps {
+  id: number;
+  title: string;
+  content: string;
+  userId: number;
+}
