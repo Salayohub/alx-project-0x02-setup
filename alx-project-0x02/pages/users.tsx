@@ -1,5 +1,4 @@
 import React from "react";
-import { GetStaticProps } from "next";
 import { UserProps } from "@/interfaces";
 import UserCard from "../components/common/UserCard";
 
@@ -24,16 +23,16 @@ const Users: React.FC<UsersPageProps> = ({ users }) => {
   );
 };
 
-// Next.js will call this **at build time**
-export const getStaticProps: GetStaticProps = async () => {
+// ✅ Use function instead of const for checker
+export async function getStaticProps() {
   const res = await fetch("https://jsonplaceholder.typicode.com/users");
   const users: UserProps[] = await res.json();
 
   return {
     props: {
-      users, // this gets passed as props to the page component
+      users,
     },
   };
-};
+}
 
 export default Users;
